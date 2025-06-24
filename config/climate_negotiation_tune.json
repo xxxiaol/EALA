@@ -1,0 +1,9 @@
+{
+  "model": "Meta-Llama-3-8B-Instruct",
+  "is_api": false,
+  "max_output_length": 4096,
+  "mode": "tune",
+  "full_parameter": true,
+  "task_decomposition": true,
+  "max_length": 4096
+}

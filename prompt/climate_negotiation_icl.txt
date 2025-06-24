@@ -1,0 +1,26 @@
+Please extract all the interactions between parties from this text.
+Each party should be a country or a coalition.
+The party can take the following values, in the list {entities}.
+The relation can take the following values.
+On behalf of: when country1 speaks on behalf of or for country2. Here it is clear that country1 and country2 (and probably together with a larger group of parties) have previously coordinated a common position, which is being presented by country1 for the whole group. On behalf of is not coded when a member of an established coalition (see list below) speaks on behalf of this coalition (e.g. “Grenada, on behalf of AOSIS...” is coded simply as a statement by AOSIS). In this case, the membership of these coalitions is already fixed, and it is clear that if the coalition makes a statement, all of its members have already agreed to this position.
+Support: is used when the text explicitly says that country2 (or its statement) was supported by country1, even when this support is expressed in different sentences.
+Agreement: when several countries are reported to hold the same position on an issue. This may be in text like “several parties, including Country 1, Country 2 and Country 3, proposed ...”. Agreement may be coded also when two different sentences refer to the same position being held by different countries, even though the relationship (agreeing with each other) is not explicitly written.
+Delaying proposal: when country1 proposes that country2’s idea or proposal be discussed at a later time.
+Opposition: when the text reports country1 opposing the statement or position expressed by country2. This has also been coded when the word “opposition” is not explicitly mentioned, but it is clear from the statements that they oppose each other.
+
+Further coding rules:
+- For agreement: as in these cases it is not clear in which direction the relationship goes, then it is coded in both directions: “SAMOA agrees EU” is coded as “Samoa – agreement – EU” and as “EU – agreement – Samoa”.
+- Behalf is also coded bi-directionally (e.g. “PERU, on behalf of CHILE and COLOMBIA” is coded as “Peru behalf Chile”, “Peru – behalf – Colombia”, “Chile – behalf – Peru”, “Chile – behalf – Colombia”, “Colombia behalf – Peru”, and “Colombia – behalf – Chile”). This is because even if it is clear from the text that country1 spoke for the rest of the group (and not the other way around), the rationale behind this type of relationship is that the whole group of countries coordinated a common position beforehand. In this sense, it does not really matter who was the actual speaker, it matters who belongs to the group. 
+- If several countries (more than 2) agree with each other, then each pair is coded as a new observation, and again in both directions (e.g. “AUSTRALIA, NEW ZEALAND, ICELAND and others...” is coded as “Australia – agreement – New Zealand”, “Australia – agreement – Iceland”, “New Zealand agreement – Australia”, “New Zealand – agreement – Iceland”, “Iceland – agreement – Australia”, “Iceland agreement – New Zealand”. 
+- If several countries oppose or support another one, then not only the opposition or the support is coded, but also the agreement between all countries that are supporting / opposing. 
+- Reactions (opposition, criticism, etc.) to what the Chair of the group or the UNFCCC Secretariat have proposed or organized are not coded, because the Chairs (even if they come originally from a specific country) are supposed to be neutral.
+
+The output should be a list of JSON objects. Each JSON object codes one interaction, with keys "Party1", "Party2", and "Relation". If there is no interaction between parties, the output should be an empty list "[]".
+
+Examples:
+{examples}
+
+Text:
+{text}
+
+Output:

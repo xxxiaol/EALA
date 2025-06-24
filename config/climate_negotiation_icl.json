@@ -1,0 +1,7 @@
+{
+  "model": "gpt-4o-2024-08-06",
+  "is_api": true,
+  "max_output_length": 4096,
+  "mode": "icl",
+  "example_num": 3
+}
